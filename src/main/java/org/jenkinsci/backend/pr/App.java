@@ -23,7 +23,7 @@ public class App {
         GHOrganization org = gh.getOrganization("jenkinsci");
         for (GHRepository r : org.listRepositories()) {
             // as a roll out, only do this for 10% of the repositories
-            if (r.getName().hashCode()%10==0)
+            if (r.getName().hashCode()%10==0 && !r.getName().equals("jenkins"))
                 greet(r);
         }
     }

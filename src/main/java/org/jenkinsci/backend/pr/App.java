@@ -22,7 +22,9 @@ public class App {
         GitHub gh = GitHub.connect();
         GHOrganization org = gh.getOrganization("jenkinsci");
         for (GHRepository r : org.listRepositories()) {
-            greet(r);
+            // as a roll out, only do this for 10% of the repositories
+            if (r.getName().hashCode()%10==0)
+                greet(r);
         }
     }
 

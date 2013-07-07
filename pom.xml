@@ -13,6 +13,19 @@
 
   <name>backend-pull-request-monitor</name>
 
+  <build>
+    <plugins>
+      <plugin>
+        <!-- let 'mvn exec:java' run the daemon -->
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>org.jenkinsci.backend.pr.App</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>org.kohsuke</groupId>

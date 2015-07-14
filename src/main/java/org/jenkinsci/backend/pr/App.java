@@ -22,7 +22,8 @@ public class App {
         GitHub gh = GitHub.connect();
         GHOrganization org = gh.getOrganization("jenkinsci");
         for (GHRepository r : org.listRepositories()) {
-            greet(r);
+            if (!r.getName().equals("jenkins"))
+                greet(r);
         }
     }
 

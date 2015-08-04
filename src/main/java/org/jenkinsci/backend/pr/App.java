@@ -38,7 +38,7 @@ public class App {
      * Posts a note to set the expectation.
      */
     protected void greet(GHPullRequest pr) throws IOException {
-        if (pr.getUser().getLogin().equals("KostyaSha") {
+        if (pr.getUser().getLogin().equals("KostyaSha")) {
             return; // i learned this doc
         }
         

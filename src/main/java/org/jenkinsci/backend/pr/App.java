@@ -43,7 +43,7 @@ public class App {
 
         System.out.println("Greeting "+pr.getRepository().getName() + "\t" + pr.getTitle());
 
-        pr.comment(String.format("Thank you for a pull request! Please check [this document](%s) for how the Jenkins project handles pull requests",LINK));
+        pr.comment(String.format("Thank you for this pull request! Please check [this document](%s) for how the Jenkins project handles pull requests.",LINK));
     }
 
     /**
